@@ -58,8 +58,7 @@ class MainLoop(MainLoopBase):
             self.network = Unet
         self.clip_gradient_global_norm = 100000.0
 
-        #self.use_pyro_dataset = True
-        self.use_pyro_dataset = False
+        self.use_pyro_dataset = True
         self.save_output_images = True
         self.save_debug_images = False
         self.has_validation_groundtruth = cv in [0, 1, 2]
