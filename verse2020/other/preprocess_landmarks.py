@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # set to true if generating files for verse2020
     verse2020 = True
     if verse2020:
-        verse_dataset_folder = '../verse2020_dataset'
+        verse_dataset_folder = '../../../verse2020_dataset'
         landmark_mapping = dict([(i + 1, i) for i in range(25)] + [(28, 25)])
     else:
         verse_dataset_folder = '../verse2019_dataset'

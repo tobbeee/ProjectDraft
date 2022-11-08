@@ -79,7 +79,7 @@ class MainLoop(MainLoopBase):
         self.use_pyro_dataset = True
         self.save_output_images = True
         self.save_debug_images = False
-        self.local_base_folder = '/proj/uppmax2022-2-25/verse2020_dataset'
+        self.local_base_folder = "../../../verse2020_dataset"
         self.image_size = [None, None, None]
         self.image_spacing = [config.spacing] * 3
         self.max_image_size_for_cropped_test = [128, 128, 448]
