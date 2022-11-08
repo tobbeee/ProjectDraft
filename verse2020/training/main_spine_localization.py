@@ -2,7 +2,7 @@
 import socket
 import sys
 from collections import OrderedDict
-sys.path.insert(0, '~/../../proj/uppmax2022-2-25/MedicalDataAugmentationTool')
+sys.path.insert(0, '../../../MedicalDataAugmentationTool')
 import numpy as np
 import tensorflow as tf
 import utils.io.image
@@ -62,7 +62,7 @@ class MainLoop(MainLoopBase):
         self.save_output_images = True
         self.save_debug_images = False
         self.has_validation_groundtruth = cv in [0, 1, 2]
-        self.local_base_folder = '../../../verse2020_dataset'
+        self.local_base_folder = '../verse2020_dataset'
         self.image_size = [None, None, None]
         self.image_spacing = [config.spacing] * 3
         self.sigma_regularization = 100.0
