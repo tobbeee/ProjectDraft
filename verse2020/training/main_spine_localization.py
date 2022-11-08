@@ -133,7 +133,8 @@ class MainLoop(MainLoopBase):
             hostname = socket.gethostname()
             #server_name = '@' + hostname + ':52132'
             server_name = '@' + "s22.uppmax.uu.se" + ':52132'
-            uri = 'PYRO:verse2020_dataset' + server_name
+            #uri = 'PYRO:verse2020_dataset' + server_name
+            uri = 'PYRO:tojo0162' + server_name
             print('using pyro uri', uri)
             try:
                 self.dataset_train = PyroClientDataset(uri, **dataset_parameters)
