@@ -9,7 +9,6 @@ Pyro4.config.SERIALIZERS_ACCEPTED = {'pickle'}
 import socket
 from datasets.pyro_dataset import PyroServerDataset
 
-
 from dataset import Dataset
 
 @Pyro4.expose
@@ -19,7 +18,7 @@ class VerseServerDataset(PyroServerDataset):
 
     def init_with_parameters(self, *args, **kwargs):
         # TODO: adapt base folder, in case this script runs on a remote server
-        kwargs['base_folder'] = '../../../verse2020_dataset'
+        kwargs['base_folder'] = '../verse2020_dataset'
         self.dataset_class = Dataset(*args, **kwargs)
         self.dataset = self.dataset_class.dataset_train()
 
