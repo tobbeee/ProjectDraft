@@ -3,7 +3,7 @@ import Pyro4
 import sys 
 import importlib.util
 
-sys.path.insert(0, "~/../../proj/uppmax2022-2-25/MedicalDataAugmentationTool")
+sys.path.insert(0, "../../../MedicalDataAugmentationTool")
 Pyro4.config.SERIALIZER = 'pickle'
 Pyro4.config.SERIALIZERS_ACCEPTED = {'pickle'}
 import socket
