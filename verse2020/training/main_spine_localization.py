@@ -2,7 +2,7 @@
 import socket
 import sys
 from collections import OrderedDict
-sys.path.insert(0, '../../../MedicalDataAugmentationTool')
+#sys.path.insert(0, '../../../MedicalDataAugmentationTool')
 import numpy as np
 import tensorflow as tf
 import utils.io.image
