@@ -137,7 +137,7 @@ class MainLoop(MainLoopBase):
             print('using pyro uri', uri)
             try:
                 self.dataset_train = PyroClientDataset(uri, **dataset_parameters)
-                print(self.dataset_train)
+                print("HELLO", self.dataset_train)
             except Exception as e:
                 print('Error connecting to server dataset. Start server_dataset_loop.py and set correct hostname, or set self.use_pyro_dataset = False.')
                 raise e
