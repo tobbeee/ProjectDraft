@@ -211,6 +211,7 @@ class MainLoop(MainLoopBase):
         image, target_landmarks, image_id = self.dataset_train_iter.get_next()
         with tf.GradientTape() as tape:
             _, losses = self.call_model_and_loss(image, target_landmarks, training=True)
+            print(losses)
             if self.reg_constant > 0:
                 losses['loss_reg'] = self.reg_constant * tf.reduce_sum(self.model.losses)
             loss = tf.reduce_sum(list(losses.values()))
@@ -235,7 +236,6 @@ class MainLoop(MainLoopBase):
         self.optimizer.apply_gradients(zip(grads, variables))
 
         self.loss_metric_logger_train.update_metrics(metric_dict)
-        print("do we get here?")
 
     def test_full_image(self, dataset_entry):
         """
