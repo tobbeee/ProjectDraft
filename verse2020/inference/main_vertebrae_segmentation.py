@@ -5,6 +5,8 @@ import sys
 import traceback
 from collections import OrderedDict
 from glob import glob
+import sys
+sys.path.insert(0, '../../../MedicalDataAugmentationTool')
 
 import SimpleITK as sitk
 import numpy as np
