@@ -30,6 +30,7 @@ class MainLoop(MainLoopBase):
         :param cv: The cv fold. 0, 1, 2 for CV; 'train_all' for training on whole dataset.
         :param config: config dictionary
         """
+        
         super().__init__()
         self.use_mixed_precision = True
         if self.use_mixed_precision:
@@ -42,7 +43,8 @@ class MainLoop(MainLoopBase):
         self.learning_rates = [self.learning_rate, self.learning_rate * 0.5, self.learning_rate * 0.1]
         self.learning_rate_boundaries = [50000, 75000]
         self.max_iter = 10000
-        self.test_iter = 5000
+        #self.test_iter = 5000
+        self.test_iter = 15000
         self.disp_iter = 100
         self.snapshot_iter = 5000
         self.test_initialization = False
@@ -182,6 +184,7 @@ class MainLoop(MainLoopBase):
         :param mask: If not none, calculate loss only pixels, where mask == 1
         :return: L2 loss of (pred - target) / batch_size
         """
+        print(tf.shape(pred))
         batch_size, channel_size, image_size = get_batch_channel_image_size(pred, self.data_format, as_tensor=True)
         if mask is not None:
             diff = (pred - target) * mask
