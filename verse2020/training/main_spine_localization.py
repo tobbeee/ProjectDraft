@@ -209,7 +209,7 @@ class MainLoop(MainLoopBase):
         """
         print("Spine loc training...")
         image, target_landmarks, image_id = self.dataset_train_iter.get_next()
-        with tf.GradientTape() as tape:
+        with tf.gradients() as tape:
             _, losses = self.call_model_and_loss(image, target_landmarks, training=True)
             if self.reg_constant > 0:
                 losses['loss_reg'] = self.reg_constant * tf.reduce_sum(self.model.losses)
