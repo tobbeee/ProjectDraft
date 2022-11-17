@@ -173,7 +173,7 @@ class MainLoop(MainLoopBase):
                                                        self.output_folder_handler.path('test'),
                                                        self.output_folder_handler.path('test.csv'))
 
-    #@tf.function
+    @tf.function
     def loss_function(self, pred, target, mask=None):
         """
         L2 loss function calculated with prediction and target.
@@ -202,7 +202,7 @@ class MainLoop(MainLoopBase):
         losses['loss_net'] = self.loss_function(target=target_heatmap, pred=prediction)
         return prediction, losses
 
-    #@tf.function
+    @tf.function
     def train_step(self):
         """
         Perform a training step.
