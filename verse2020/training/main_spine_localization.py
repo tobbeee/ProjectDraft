@@ -32,7 +32,7 @@ class MainLoop(MainLoopBase):
         """
         
         super().__init__()
-        self.use_mixed_precision = False
+        self.use_mixed_precision = True
         if self.use_mixed_precision:
             policy = mixed_precision.Policy('mixed_float16')
             mixed_precision.set_policy(policy)
