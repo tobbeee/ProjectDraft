@@ -209,7 +209,7 @@ class MainLoop(MainLoopBase):
         """
         print("Spine loc training...")
         image, target_landmarks, image_id = self.dataset_train_iter.get_next()
-        print(image_id)
+        print(target_landmarks)
         with tf.GradientTape() as tape:
             _, losses = self.call_model_and_loss(image, target_landmarks, training=True)
             if self.reg_constant > 0:
