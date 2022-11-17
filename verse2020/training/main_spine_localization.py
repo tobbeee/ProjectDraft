@@ -138,7 +138,6 @@ class MainLoop(MainLoopBase):
             print('using pyro uri', uri)
             try:
                 self.dataset_train = PyroClientDataset(uri, **dataset_parameters)
-                print("HELLO", self.dataset_train)
             except Exception as e:
                 print('Error connecting to server dataset. Start server_dataset_loop.py and set correct hostname, or set self.use_pyro_dataset = False.')
                 raise e
@@ -210,7 +209,6 @@ class MainLoop(MainLoopBase):
         """
         print("Spine loc training...")
         image, target_landmarks, image_id = self.dataset_train_iter.get_next()
-        print(tf.shape(image))
         with tf.GradientTape() as tape:
             _, losses = self.call_model_and_loss(image, target_landmarks, training=True)
             if self.reg_constant > 0:
