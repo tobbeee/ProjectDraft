@@ -207,7 +207,7 @@ class MainLoop(MainLoopBase):
         """
         Perform a training step.
         """
-        print("Training...")
+        print("Spine loc training...")
         image, target_landmarks, image_id = self.dataset_train_iter.get_next()
         print(tf.size(image))
         with tf.GradientTape() as tape:

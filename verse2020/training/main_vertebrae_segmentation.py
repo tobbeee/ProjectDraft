@@ -218,6 +218,7 @@ class MainLoop(MainLoopBase):
         Perform a training step.
         """
         image, single_label, single_heatmap = self.dataset_train_iter.get_next()
+        print("Segmentation training...")
         image_heatmap_concat = tf.concat([image, single_heatmap], axis=1 if self.data_format == 'channels_first' else -1)
         with tf.GradientTape() as tape:
             _, losses = self.call_model_and_loss(image_heatmap_concat, single_label, training=True)
