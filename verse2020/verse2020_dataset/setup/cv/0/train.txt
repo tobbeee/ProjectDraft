@@ -1,7 +1,7 @@
 verse413_verse272_CT-iso
 verse409_verse226_CT-iso
 verse586_CT-iso
-verse112_CT-iso
+verse112
 GL240_CT-ax
 verse075
 verse415_verse243_CT-sag
@@ -71,6 +71,5 @@ verse151
 verse408_verse223_CT-iso
 verse532
 verse631_CT-sag
-verse525
 verse004
 verse534
