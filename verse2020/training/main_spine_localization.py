@@ -132,7 +132,7 @@ class MainLoop(MainLoopBase):
             # TODO: adapt hostname, in case this script runs on a remote server
             hostname = socket.gethostname()
             #server_name = '@' + hostname + ':52132'
-            server_name = '@' + "s102.uppmax.uu.se" + ':52132'
+            server_name = '@' + "s2.uppmax.uu.se" + ':52132'
             uri = 'PYRO:verse2020_dataset' + server_name
             print('using pyro uri', uri)
             try:
